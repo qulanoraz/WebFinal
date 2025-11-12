@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema || Collection</title>
+    <link rel="stylesheet" href="./styles1.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles4.css">
+    <link rel="stylesheet" href="./collection-styles.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <link rel="stylesheet" href="./navbar.css">
+    <script src="./script/themechange.js" defer></script>
+    <script src="./script/animations.js" defer></script>
+    <script src="./script/translator.js" defer></script>
+    <script src="./script/navigation.js" defer></script>
+    <script src="./script/animate.js" defer></script>
+    <script src="./script/formNew.js" defer></script>
+    <script src="./script/LazyImages.js" defer></script>
+    <script src="./script/collection-modal.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./script/navbar2.js" defer></script>
+    <script src="https://unpkg.com/i18next@23.15.2/dist/umd/i18next.min.js"></script>
+</head>
+<body>
+  <header id="top-banner" class="header-section">
+      <nav class="navbar">
+        <a href="" class="logo-link">
+          <img src="./images/Logo.png" alt="" class="logo" width="80" height="80">
+        </a>
+        <ul class="nav-links">
+          <li class="nav-links__item">
+              <a href="./index.html" >Home</a>
+          </li>
+          <li class="nav-links__item">
+              <a href="./movies.html">Movies</a>
+          </li>
+          <li class="nav-links__item">
+              <a href="./series.html">Series</a>
+          </li>           
+          <li class="nav-links__item">
+              <a href="./collection.html">Collection</a>
+          </li>
+        </ul>
+        <ul class="nav-main">
+                <li class="nav-main__item">
+                    <a href="#" class="nav-main__link" id="profile-button">
+                        <img src="./images/3.png" alt="" class="nav-main__img" width="43" height="43">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+<aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <h2 class="sidebar-title">Profile</h2>
+        <button class="sidebar-close" id="sidebar-close">&times;</button>
+    </div>
+    <div class="sidebar-content">
+        <div class="sidebar-section">
+            <h3 class="sidebar-section-title">Language Settings</h3>
+            <div class="sidebar-item">
+                <label>Select Language</label>
+                <select id="sidebar-language-selector">
+                    <option class="sidebar-option" value="en">English</option>
+                    <option class="sidebar-option" value="ru">Русский</option>
+                    <option class="sidebar-option" value="kz">Қазақша</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <h3 class="sidebar-section-title">Account Information</h3>
+            <div class="sidebar-item">
+                <label>Username</label>
+                <div class="sidebar-item-value">MovieLover2025</div>
+            </div>
+            <div class="sidebar-item">
+                <label>Email</label>
+                <div class="sidebar-item-value">user@example.com</div>
+            </div>
+            <div class="sidebar-item">
+                <label>Member Since</label>
+                <div class="sidebar-item-value">November 2025</div>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <h3 class="sidebar-section-title">Preferences</h3>
+            
+            <div class="sidebar-item">
+                <label>Theme</label>
+                <button class="sidebar-item-value" id="theme-switcher">
+                    <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <span>Dark Mode</span>
+                </button>
+            </div>
+            
+            <div class="sidebar-item">
+                <label>Notifications</label>
+                <div class="sidebar-item-value">Enabled</div>
+            </div>
+        </div>
+    </div>
+</aside>
+  
+  <section class="collection">
+    <div class="collection__body">
+        <h1 class="collection__title">Collection</h1>
+    </div>
+    <ul class="collection__images">
+        <li class="collection__images-item" data-collection="musicals">
+            <h2 class="img__title">Musicals</h2>
+            <img src="./images/collection-animation.png" alt="Musicals" class="collection__image">
+            <button class="go-watch-btn">GO watch!</button>
+            <p class="collection__description">Watch collection of music!</p>
+        </li>
+        <li class="collection__images-item" data-collection="marvel">
+            <h2 class="img__title">Marvel</h2>
+            <img src="./images/collection-animation2.png" alt="Marvel" class="collection__image">
+            <button class="go-watch-btn">GO watch!</button>
+            <p class="collection__description">Watch movies about Marvel</p>
+        </li>
+        <li class="collection__images-item" data-collection="dc">
+            <h2 class="img__title">DC</h2>
+            <img src="./images/collection-animation3.png" alt="DC" class="collection__image">
+            <button class="go-watch-btn">GO watch!</button>
+            <p class="collection__description">Watch movies about DC</p>
+        </li>
+        <li class="collection__images-item" data-collection="johnwick">
+            <h2 class="img__title">John Wick</h2>
+            <img src="./images/collection-animation4.png" alt="John Wick" class="collection__image">
+            <button class="go-watch-btn">GO watch!</button>
+            <p class="collection__description">John Wick movies</p>
+        </li>
+        <li class="collection__images-item" data-collection="godzilla">
+            <h2 class="img__title">Godzilla</h2>
+            <img src="./images/collection-animation5.png" alt="Godzilla" class="collection__image">
+            <button class="go-watch-btn">GO watch!</button>
+            <p class="collection__description">Godzilla, hmm?</p>
+        </li>
+    </ul>
+  </section>
+
+  <div id="collectionModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-body">
+        <h2 id="collectionTitle" class="modal-title"></h2>
+        <div id="collectionItems" class="collection-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="stats">
+    <div class="stats-section">
+        <h2>Our advantages</h2>
+        
+        <div class="stat-container">
+            <div class="stat-item">
+                <span class="count-number" data-target="1250">0</span>
+                <span class="unit">+</span>
+                <p class="description">Clients</p>
+            </div>
+
+            <div class="stat-item">
+                <span class="count-number" data-target="380">0</span>
+                <span class="unit">K</span>
+                <p class="description">Viewed Films</p>
+            </div>
+
+            <div class="stat-item">
+                <span class="count-number" data-target="49">0</span>
+                <span class="unit">%</span>
+                <p class="description">Increase up</p>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  <!-- <section class="form-add">
+    <div class="form-container">
+        <div class="form-container__inner">
+        <h1 class="form__title">Form</h1>
+        <form id="myForm">
+            <input type="text" placeholder="Your name" required>
+            <input type="email" placeholder="Email" required>
+            
+            <button type="submit" id="submitBtn" class="submit-btn">
+                <span class="btn-text">Submit</span>
+                <span class="spinner" style="display: none;"></span> 
+            </button>
+        </form>
+        <p id="statusMessage" style="margin-top: 20px; color: #007bff; display: none;"></p>
+    </div>
+    </div>
+  </section> -->
+  
+  <!-- <div class="lazy-images">
+    <div style="height: 300px;"></div>
+    <img class="lazy" src="" data-src="https://images.gem.cbc.ca/v1/synps-cbc/episode/perso/cbc_brother_ott_square_v01.jpg?impolicy=ott&im=Resize=730&quality=75" alt="Image 1">
+    <div style="height: 1000px;"></div>
+    <img class="lazy" src="" data-src="https://lumiere-a.akamaihd.net/v1/images/image_9e35a739.jpeg?region=0%2C0%2C540%2C810&width=320" alt="Image 2">
+    <div style="height: 300px;"></div>
+    <img class="lazy" src="" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaqCwNzNfWJzytrxuuW3K9u9xUBJ4Hu5vUPQ&s" alt="Image 3">
+    <div style="height: 300px;"></div>
+  </div> -->
+  
+  <footer>
+  <div class="footer-content">
+    <div class="footer-left">
+      <div class="footer-logo">
+        <img src="./images/Logo.png" alt="Cinema Logo" class="footer-logo-img">
+        <h3>Cinema</h3>
+      </div>
+      <p class="footer-tagline">Your ultimate destination for movies and series</p>
+    </div>
+    
+    <div class="footer-center">
+      <div class="team-info">
+        <h4>Team</h4>
+        <p class="team-name">Oralbasar</p>
+        <p class="team-members">Zhetpysbaev Adilbek • Ulan Orazbek</p>
+      </div>
+    </div>
+    
+    <div class="footer-right">
+      <h4>Quick Links</h4>
+      <div class="footer-nav">
+        <a href="./contacts.html">Contacts</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <div class="footer-divider"></div>
+    <p class="copyright">&copy; 2025 Cinema. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,158 @@
+.omdb-info {
+    margin: 10px 0;
+}
+
+.omdb-badge {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.imdb-rating, .year, .runtime {
+    background: rgba(255, 215, 0, 0.2);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.genre-tags {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.genre-tag {
+    background: rgba(100, 149, 237, 0.3);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+}
+
+.movie-modal {
+    display: flex;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-modal-content {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.movie-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.movie-modal-body {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+}
+
+.movie-poster img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.movie-meta {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.plot {
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.movie-info-grid {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.omdb-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.7));
+    padding: 15px;
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.card:hover .omdb-info {
+    transform: translateY(0);
+}
+
+.movie-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #FFD700;
+}
+
+.omdb-badge {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.imdb-rating, .year, .runtime {
+    background: rgba(255, 215, 0, 0.3);
+    color: #FFD700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid rgba(255, 215, 0, 0.5);
+}
+
+.genre-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.genre-tag {
+    background: rgba(100, 149, 237, 0.4);
+    color: #6495ED;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    border: 1px solid rgba(100, 149, 237, 0.6);
+}

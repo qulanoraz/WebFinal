@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cinema || Series</title>
+<link rel="stylesheet" href="styles1.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="./styles4.css">
+<link rel="stylesheet" href="series-styles.css" />
+<link rel="stylesheet" href="./responsive.css">
+<link rel="stylesheet" href="./navbar.css">
+<link rel="stylesheet" href="./omdb.css">
+<link rel="stylesheet" href="./enhancedfeatures.css">
+<script src="./script/themechange.js" defer></script>
+<script src="./script/translator.js" defer></script>
+<script src="./script/navigation.js" defer></script>
+<script src="./script/series-modal.js" defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="./script/seriesSearch.js"></script>
+<script src="./script/navbar2.js" defer></script>
+<script src="./authsystem.js" defer></script>
+<script src="./omdb.js" defer></script>
+<script src="./rating-search.js" defer></script>
+<script src="https://unpkg.com/i18next@23.15.2/dist/umd/i18next.min.js"></script>
+</head>
+<body class="series-page">
+
+<header id="top-banner" class="header-section">
+      <nav class="navbar">
+        <a href="" class="logo-link">
+          <img src="./images/Logo.png" alt="" class="logo" width="80" height="80">
+        </a>
+        <ul class="nav-links">
+          <li class="nav-links__item">
+              <a href="./index.html" >Home</a>
+          </li>
+          <li class="nav-links__item">
+              <a href="./movies.html">Movies</a>
+          </li>
+          <li class="nav-links__item">
+              <a href="./series.html">Series</a>
+          </li>           
+          <li class="nav-links__item">
+              <a href="./collection.html">Collection</a>
+          </li>
+        </ul>
+        <ul class="nav-main">
+                <li class="nav-main__item">
+                    <a href="#" class="nav-main__link" id="profile-button">
+                        <img src="./images/3.png" alt="" class="nav-main__img" width="43" height="43">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+<aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <h2 class="sidebar-title">Profile</h2>
+        <button class="sidebar-close" id="sidebar-close">&times;</button>
+    </div>
+    <div class="sidebar-content">
+        <div class="sidebar-section">
+            <h3 class="sidebar-section-title">Language Settings</h3>
+            <div class="sidebar-item">
+                <label>Select Language</label>
+                <select id="sidebar-language-selector">
+                    <option class="sidebar-option" value="en">English</option>
+                    <option class="sidebar-option" value="ru">Русский</option>
+                    <option class="sidebar-option" value="kz">Қазақша</option>
+                </select>
+            </div>
+        </div>
+        <div class="sidebar-section">
+            <h3 class="sidebar-section-title">Account Information</h3>
+            <div class="sidebar-item">
+                <label>Username</label>
+                <div class="sidebar-item-value">MovieLover2025</div>
+            </div>
+            <div class="sidebar-item">
+                <label>Email</label>
+                <div class="sidebar-item-value">user@example.com</div>
+            </div>
+            <div class="sidebar-item">
+                <label>Member Since</label>
+                <div class="sidebar-item-value">November 2025</div>
+            </div>
+        </div>
+        <div class="sidebar-section">
+            <h3 class="sidebar-section-title">Preferences</h3>
+            <div class="sidebar-item">
+                <label>Theme</label>
+                <button class="sidebar-item-value" id="theme-switcher">
+                    <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <span>Dark Mode</span>
+                </button>
+            </div>
+            <div class="sidebar-item">
+                <label>Notifications</label>
+                <div class="sidebar-item-value">Enabled</div>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<main>
+  <h1 class="page-title">Series</h1>
+
+  <div class="search-bar-wrapper">
+    <input id="searchBar" type="text" placeholder="Search series..." autocomplete="off">
+    <div id="autocomplete-list" class="autocomplete-items"></div>
+  </div>  
+
+  <section class="series-grid">
+    <div class="card" data-series="peakyblinders">
+      <img src="images/image1401.jpg" alt="Peaky Blinders" />
+      <div class="overlay">Peaky Blinders</div>
+    </div>
+    <div class="card" data-series="breakingbad">
+      <img src="images/walter.jpg" alt="Breaking Bad" />
+      <div class="overlay">Breaking Bad</div>
+    </div>
+    <div class="card" data-series="got">
+      <img src="images/image142.jpg" alt="Game Of Thrones" />
+      <div class="overlay">Game Of Thrones</div>
+    </div>
+    <div class="card" data-series="moonknight">
+      <img src="images/white.jpg" alt="Moon Knight" />
+      <div class="overlay">Moon Knight</div>
+    </div>
+    <div class="card" data-series="reacher">
+      <img src="images/ambal.jpg" alt="Jack Reacher" />
+      <div class="overlay">Jack Reacher</div>
+    </div>
+    <div class="card" data-series="squidgame">
+      <img src="images/squidgame.jpg" alt="Squid Game" />
+      <div class="overlay">Squid Game</div>
+    </div>
+    <div class="card" data-series="strangers">
+      <img src="images/strangerthings.jpg" alt="Stranger Things" />
+      <div class="overlay">Stranger Things</div>
+    </div>
+    <div class="card" data-series="witcher">
+      <img src="images/witcher.jpg" alt="The Witcher" />
+      <div class="overlay">The Witcher</div>
+    </div>
+    <div class="card" data-series="thelastofus">
+      <img src="images/lastofus.jpg" alt="The Last of Us" />
+      <div class="overlay">The Last of Us</div>
+    </div>
+    <div class="card" data-series="severance">
+      <img src="images/severance.jpg" alt="Severance" />
+      <div class="overlay">Severance</div>
+    </div>
+  </section>
+</main>
+
+<div id="seriesModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="modal-body">
+      <div class="video-container">
+        <iframe id="seriesTrailer" width="100%" height="500" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="series-info">
+        <h2 id="seriesTitle"></h2>
+        <p id="seriesDescription"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-left">
+      <div class="footer-logo">
+        <img src="./images/Logo.png" alt="Cinema Logo" class="footer-logo-img">
+        <h3>Cinema</h3>
+      </div>
+      <p class="footer-tagline">Your ultimate destination for movies and series</p>
+    </div>
+    
+    <div class="footer-center">
+      <div class="team-info">
+        <h4>Team</h4>
+        <p class="team-name">Oralbasar</p>
+        <p class="team-members">Zhetpysbaev Adilbek • Ulan Orazbek</p>
+      </div>
+    </div>
+    
+    <div class="footer-right">
+      <h4>Quick Links</h4>
+      <div class="footer-nav">
+        <a href="./contacts.html">Contacts</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <div class="footer-divider"></div>
+    <p class="copyright">&copy; 2025 Cinema. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
